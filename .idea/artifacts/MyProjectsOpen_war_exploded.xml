@@ -1,6 +1,6 @@
 <component name="ArtifactManager">
   <artifact type="exploded-war" name="MyProjectsOpen:war exploded">
-    <output-path>$PROJECT_DIR$/target/MyProjectsOpen-1.0-SNAPSHOT</output-path>
+    <output-path>$PROJECT_DIR$/target/SpringFirst-1.0-SNAPSHOT</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
@@ -42,10 +42,28 @@
           <element id="library" level="project" name="Maven: org.aspectj:aspectjweaver:1.8.6" />
           <element id="library" level="project" name="Maven: javax.servlet.jsp:jsp-api:2.1" />
           <element id="library" level="project" name="Maven: jstl:jstl:1.2" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-template:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-api:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-api:1.0.6" />
+          <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.6" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-autotag-core-runtime:1.1.0" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-core:3.0.5" />
+          <element id="library" level="project" name="Maven: commons-digester:commons-digester:2.0" />
+          <element id="library" level="project" name="Maven: commons-beanutils:commons-beanutils:1.8.0" />
+          <element id="library" level="project" name="Maven: org.slf4j:jcl-over-slf4j:1.7.6" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-jsp:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-jsp:1.0.6" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-servlet:3.0.5" />
+          <element id="library" level="project" name="Maven: org.apache.tiles:tiles-request-servlet:1.0.6" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-core:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-web:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-config:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-taglibs:4.0.0.RELEASE" />
+          <element id="library" level="project" name="Maven: org.springframework.security:spring-security-acl:4.0.0.RELEASE" />
         </element>
       </element>
       <element id="directory" name="META-INF">
-        <element id="file-copy" path="$PROJECT_DIR$/target/MyProjectsOpen-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
+        <element id="file-copy" path="$PROJECT_DIR$/target/SpringFirst-1.0-SNAPSHOT/META-INF/MANIFEST.MF" />
       </element>
       <element id="javaee-facet-resources" facet="MyProjectsOpen/web/Web" />
     </root>

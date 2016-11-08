@@ -1,9 +1,13 @@
 package ua.lviv.lgs.services;
 
-/**
- * Created by Igaryok on 03.07.2016.
- */
+import ua.lviv.lgs.entity.Models;
+
+import java.util.List;
+
+
 public interface ModelsService {
 
-    void add(String model, int memory, int price);
+    void add(String model, int memory, int price, String id);
+
+    List<Models> findAllModels();
 }

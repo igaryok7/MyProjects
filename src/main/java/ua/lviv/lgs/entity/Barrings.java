@@ -1,10 +1,9 @@
 package ua.lviv.lgs.entity;
 
+import javax.jws.soap.SOAPBinding;
 import javax.persistence.*;
 
-/**
- * Created by Igaryok on 30.06.2016.
- */
+
 @Entity
 public class Barrings {
     @Id

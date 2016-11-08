@@ -2,9 +2,7 @@ package ua.lviv.lgs.entity;
 
 import javax.persistence.*;
 
-/**
- * Created by Igaryok on 30.06.2016.
- */
+
 @Entity
 public class Specification {
     @Id
@@ -20,6 +18,8 @@ public class Specification {
     private int camera;
     @Column
     private String  country;
+    @ManyToOne (fetch = FetchType.LAZY)
+    private Models models;
 
     public Specification(){
 

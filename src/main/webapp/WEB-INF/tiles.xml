@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+
+<tiles-definitions>
+    <definition name="base.definition" template="/views/tiles/layout.jsp">
+        <put-attribute name="header" value="/views/tiles/header.jsp"/>
+        <put-attribute name="menu" value="/views/tiles/menu.jsp"/>
+        <put-attribute name="footer" value="/views/tiles/footer.jsp"/>
+        <put-attribute name="body" value=""/>
+    </definition>
+
+    <definition name="home" extends="base.definition">
+        <put-attribute name="body" value="/views/home.jsp"/>
+        <put-attribute name="title" value="Home"/>
+    </definition>
+    
+    <definition name="productsAll" extends="base.definition">
+        <put-attribute name="body" value="/views/all.jsp"/>
+        <put-attribute name="title" value="Products"/>
+    </definition>
+
+    <definition name="fromViewToController" extends="base.definition">
+        <put-attribute name="body" value="/views/new.jsp"/>
+        <put-attribute name="title" value="Product New"/>
+    </definition>
+
+    <definition name="products-*" extends="base.definition">
+        <put-attribute name="body" value="/views/{1}.jsp"/>
+        <put-attribute name="title" value="{1}"/>
+    </definition>
+
+    <definition name="models-new" extends="base.definition">
+        <put-attribute name="body" value="/views/models-new.jsp"/>
+        <put-attribute name="title" value="New Models"/>
+    </definition>
+
+    <definition name="models-all" extends="base.definition">
+        <put-attribute name="body" value="/views/models-all.jsp"/>
+        <put-attribute name="title" value="All Models"/>
+    </definition>
+    <definition name="login" extends="base.definition">
+        <put-attribute name="body" value="/views/login.jsp"/>
+        <put-attribute name="title" value="login"/>
+    </definition>
+    <definition name="registration" extends="base.definition">
+        <put-attribute name="body" value="/views/rigistration.jsp"/>
+        <put-attribute name="title" value="Registration"/>
+    </definition>
+
+
+</tiles-definitions>

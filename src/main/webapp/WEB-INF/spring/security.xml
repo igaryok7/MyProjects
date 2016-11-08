@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:http="http://www.springframework.org/schema/c"
+       xmlns:security="http://www.springframework.org/schema/security"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security.xsd">
+
+    <security:http>
+        <security:intercept-url pattern="/" access="permitAll"/>
+        <security:form-login login-page="/loginpage" login-processing-url="/loginprocesing" />
+        <security:logout logout-url="/logout" logout-success-url="/"/>
+        <security:intercept-url pattern="/productNew" access="isAuthenticated()"/>
+        <security:intercept-url pattern="/createModel" access="isAuthenticated()"/>
+        <security:csrf disabled="true"/>
+    </security:http>
+
+    <security:authentication-manager>
+        <security:authentication-provider>
+            <security:user-service>
+                <security:user name="admin" password="admin" authorities="ROLE_ADMIN"/>
+            </security:user-service>
+        </security:authentication-provider>
+    </security:authentication-manager>
+
+</beans>

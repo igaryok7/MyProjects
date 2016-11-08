@@ -1,9 +1,15 @@
 package ua.lviv.lgs.services;
 
-/**
- * Created by Igaryok on 03.07.2016.
- */
+import ua.lviv.lgs.entity.Products;
+
+import java.util.List;
+
+
 public interface ProductsService {
 
     void add(String Brand);
+
+    List<Products> findAll();
+
+    Products finById(int id);
 }

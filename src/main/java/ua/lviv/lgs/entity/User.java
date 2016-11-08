@@ -3,9 +3,7 @@ package ua.lviv.lgs.entity;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by Igaryok on 30.06.2016.
- */
+
 @Entity
 public class User {
 
@@ -19,22 +17,31 @@ public class User {
     @Column
     private int age;
     @Column
-    private String UserName;
+    private String email;
     @Column
     private String password;
-    @OneToMany (fetch = FetchType.LAZY, mappedBy = "User")
+    @OneToMany (fetch = FetchType.LAZY)
     private List<Barrings> barringsList;
+
 
     public User(){
 
     }
 
-    public User(String Lastname, String FirstName, int age, String UserName, String password){
+    public User(String Lastname, String FirstName, int age, String email, String password){
         this.LastName = Lastname;
         this.FirstName=FirstName;
         this.age=age;
-        this.UserName=UserName;
+        this.email=email;
         this.password=password;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getLastName() {
@@ -62,11 +69,11 @@ public class User {
     }
 
     public String getUserName() {
-        return UserName;
+        return email;
     }
 
-    public void setUserName(String userName) {
-        UserName = userName;
+    public void setUserName(String email) {
+        email = email;
     }
 
     public String getPassword() {
@@ -84,7 +91,7 @@ public class User {
                 ", LastName='" + LastName + '\'' +
                 ", FirstName='" + FirstName + '\'' +
                 ", age=" + age +
-                ", UserName='" + UserName + '\'' +
+                ", UserName='" + email + '\'' +
                 ", password='" + password + '\'' +
                 '}';
     }

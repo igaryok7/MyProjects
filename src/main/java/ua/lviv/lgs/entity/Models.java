@@ -3,9 +3,7 @@ package ua.lviv.lgs.entity;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by Igaryok on 30.06.2016.
- */
+
 @Entity
 public class Models {
     @Id
@@ -17,11 +15,10 @@ public class Models {
     private int memory;
     @Column
     private int price;
-    @ManyToOne (fetch = FetchType.LAZY)
+    @ManyToOne (fetch = FetchType.EAGER)
     private Products products;
-    @OneToMany (fetch = FetchType.LAZY, mappedBy = "models")
+    @OneToMany (fetch = FetchType.EAGER)
     private List<Specification> speclist;
-
 
     public Models(){
 
@@ -55,6 +52,32 @@ public class Models {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public Products getProducts() {
+        return products;
+    }
+
+    public void setProducts(Products products) {
+        this.products = products;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String toString() {
+        return "Models{" +
+                "id=" + id +
+                ", model='" + model + '\'' +
+                ", memory=" + memory +
+                ", price=" + price +
+                '}';
     }
 }
 

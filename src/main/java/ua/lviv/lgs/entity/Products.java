@@ -1,11 +1,10 @@
 package ua.lviv.lgs.entity;
 
+import javax.jws.soap.SOAPBinding;
 import javax.persistence.*;
 import java.util.List;
 
-/**
- * Created by Igaryok on 30.06.2016.
- */
+
 @Entity
 public class Products {
     @Id
@@ -13,8 +12,9 @@ public class Products {
     private int id;
     @Column
     private String Brand;
-    @OneToMany (fetch = FetchType.LAZY, mappedBy = "Products")
+    @OneToMany (fetch = FetchType.EAGER, mappedBy = "products")
     private List<Models> modelslist;
+
 
     public Products(){
 
@@ -22,6 +22,14 @@ public class Products {
 
     public Products(String Brand){
         this.Brand=Brand;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getBrand() {
@@ -32,4 +40,20 @@ public class Products {
         Brand = brand;
     }
 
+    public List<Models> getModelslist() {
+        return modelslist;
+    }
+
+    public void setModelslist(List<Models> modelslist) {
+        this.modelslist = modelslist;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Products{" +
+                "id=" + id +
+                ", Brand='" + Brand + '\'' +
+                '}';
+    }
 }
